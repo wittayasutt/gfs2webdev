@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 50%;
+        }
+
+        .bello {
+            font-size: 80px;
+        }
+
+        .slide {
+            display: none;
+            background: blue;
+            height: 100px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bello">
+        Bello World!
+    </div>
+
+    <div id="output"></div>
+
+
+    <div class="up">up</div>
+    <div class="down">down</div>
+    <div class="slide">slide</div>
+
+    <a href="page.html">click to page 2</a>
+    <img src="" alt="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".up").click(function () {
+                $('.slide').slideUp();
+                $('.bello').html('<h4>h1</h4>');
+            });
+
+
+            $(".down").click(function () {
+                $('.slide').slideDown();
+                $(".bello").css("color", "red");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
